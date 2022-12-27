@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />  
+    <title>My Awesome App</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
+    <link rel="stylesheet" type="text/css" href="./style.css" />
+    <script src="/socket.io/socket.io.js"></script>
+  </head>
+  <body>
+    <div style="width: 500px; height: auto; background-color:#e7e7e7; display: flex; flex-direction:column; justify-content:center; align-items:center">
+        <h1 style="color:blue;">Ingrese datos</h1>
+        <br/>
+
+        <form
+            style="display: flex; flex-direction:column; justify-content:center; align-items:center" 
+            id="new_product_form"
+        >
+            <div style="width: 100%">
+                <p style="width:100px; margin-right:24px"><b>Nombre</b></p>
+                <input type="text" id="title" name="title">
+            </div>
+
+            <div style="width: 100%">
+                <p style="width:100px; margin-right:24px"><b>Precio</b></p>
+                <input type="text" id="price" name="price">
+            </div>
+
+            <div style="width: 100%">  
+                <p style="width:100px; margin-right:24px" ><b>Url imagen</b></p>
+                <input type="text" id="thumbnail" name="thumbnail">
+            </div>
+
+            <button type="submit" form="new_product_form" id="send_button" style="margin-bottom: 24px; margin-top: 24px; background-color: green; border-radius: 12px">Enviar</button>
+        </form>
+
+        </hr>
+        <h1 style="color:blue;">Tabla de productos en tiempo real</h1>
+        <br/>
+
+        <div id="table_container"></div>
+    </div>
+
+    <div style="width: 500px; height: auto; background-color:#e7e7e7; display: flex; flex-direction:column; justify-content:center; align-items:center; margin-top: 48px">
+      <h1 style="color:blue;">Centro de mensajes</h1>
+      <br/>
+
+      <form
+          style="display: flex; flex-direction:column; justify-content:center; align-items:center" 
+          id="mensajes_form"
+      >
+          <div style="width: 100%">
+              <p style="width:100px; margin-right:24px"><b>Email</b></p>
+              <input type="text" id="email" name="email">
+          </div>
+
+          <div style="width: 100%">
+              <p style="width:100px; margin-right:24px"><b>Mensaje</b></p>
+              <input type="text" id="mensaje" name="mensaje">
+          </div>
+
+          <button type="submit" form="mensajes_form" id="send_button_msj" style="margin-bottom: 24px; margin-top: 24px; background-color: green; border-radius: 12px">Enviar</button>
+      </form>
+
+      </hr>
+      <h1 style="color:blue;">Mensajes</h1>
+      <br/>
+
+      <div style="display: flex; flex-direction: column; align-items: flex-start; justify-content: flex-start;" id="mensajes_container"></div>
+  </div>
+    
+  <script type="text/javascript" src="./index.js"></script>
+  </body>
+</html>

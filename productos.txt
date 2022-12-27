@@ -1,0 +1,1 @@
+[{"id":1,"title":"Oreos","price":"300","thumbnail":"https://statics.dinoonline.com.ar/imagenes/large_460x460/2142250_l.jpg"},{"id":2,"title":"Pepitos","price":"150","thumbnail":"https://www.distribuidorapop.com.ar/wp-content/uploads/2017/07/galletitas-pepitos-por-mayor-768x768.jpg.webp"}]
